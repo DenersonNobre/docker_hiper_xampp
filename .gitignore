@@ -1,11 +1,10 @@
-# Data volumes
+#Ignore data volumes
 mysql_data/
 
-# Logs
+#Ignore logs
 *.log
+logs/
 
-# Temp files
-*.tmp
-
-# Node modules
-node_modules/
+#System files
+.DS_Store
+Thumbs.db

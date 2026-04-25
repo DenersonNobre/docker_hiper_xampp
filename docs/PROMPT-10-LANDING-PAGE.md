@@ -1,3 +1,14 @@
+# PROMPT 10 - Landing Page
+
+## Contexto
+
+A landing page é a porta de entrada visual do projeto. Deve ser clean, profissional, e ter links para todos os serviços.
+
+## Tarefa
+
+### Criar htdocs/super-xampp/index.html:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,14 +21,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     
     <style>
+        /* Tema claro */
         :root {
-            --primary: #6366f1;
-            --success: #22c55e;
-            --info: #3b82f6;
-            --bg: #f8fafc;
-            --bg-card: #ffffff;
-            --text: #1e293b;
-            --text-muted: #64748b;
+            --primary: #6366f1;      /* Roxo */
+            --success: #22c55e;     /* Verde */
+            --info: #3b82f6;         /* Azul */
+            --bg: #f8fafc;           /* Fundo claro */
+            --bg-card: #ffffff;      /* Cards brancos */
+            --text: #1e293b;         /* Texto escuro */
+            --text-muted: #64748b;   /* Texto secundário */
         }
         
         body { 
@@ -26,6 +38,7 @@
             color: var(--text); 
         }
         
+        /* Header */
         .header { text-align: center; padding: 60px 0 40px; }
         .logo {
             width: 80px; height: 80px;
@@ -37,6 +50,7 @@
         h1 { font-size: 2.5rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
         .subtitle { color: var(--text-muted); font-size: 1.1rem; }
         
+        /* Status badge */
         .status {
             display: inline-flex; align-items: center; gap: 8px;
             background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3);
@@ -48,6 +62,7 @@
             border-radius: 50%; animation: pulse 2s infinite; 
         }
         
+        /* Cards */
         .card {
             background: var(--bg-card); border: 1px solid #e2e8f0; 
             border-radius: 16px; padding: 24px; 
@@ -56,17 +71,20 @@
         }
         .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         
+        /* Ícones de serviço */
         .service-icon {
             width: 48px; height: 48px; border-radius: 12px; 
             display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
         }
         
+        /* Cores dos ícones */
         .icon-apache { background: rgba(211, 65, 46, 0.1); color: #d3412e; }
         .icon-mysql { background: rgba(0, 121, 183, 0.1); color: #0079b7; }
         .icon-node { background: rgba(34, 197, 94, 0.1); color: #22c55e; }
         .icon-tomcat { background: rgba(244, 119, 54, 0.1); color: #f47736; }
         .icon-phpmyadmin { background: rgba(25, 90, 162, 0.1); color: #195aa2; }
         
+        /* Footer */
         footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 0.85rem; }
         
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
@@ -74,6 +92,7 @@
 </head>
 <body>
     <div class="container">
+        <!-- Header -->
         <div class="header">
             <div class="logo"><i class="bi bi-lightning-charge text-white"></i></div>
             <h1>Super XAMPP</h1>
@@ -83,7 +102,9 @@
             </div>
         </div>
 
+        <!-- Cards de Serviços -->
         <div class="row g-4">
+            <!-- Apache -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="d-flex align-items-center gap-3 mb-3">
@@ -100,6 +121,7 @@
                 </div>
             </div>
 
+            <!-- MySQL -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="d-flex align-items-center gap-3 mb-3">
@@ -116,6 +138,7 @@
                 </div>
             </div>
 
+            <!-- Node.js -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="d-flex align-items-center gap-3 mb-3">
@@ -132,6 +155,7 @@
                 </div>
             </div>
 
+            <!-- Tomcat -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="d-flex align-items-center gap-3 mb-3">
@@ -148,6 +172,7 @@
                 </div>
             </div>
 
+            <!-- phpMyAdmin -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="d-flex align-items-center gap-3 mb-3">
@@ -166,11 +191,33 @@
         </div>
 
         <footer>
-            <p class="mb-1">Super XAMPP - Docker</p>
-            <p style="font-size: 0.75rem;">Apache - MySQL - Node.js - Tomcat - phpMyAdmin</p>
+            <p class="mb-1">Super XAMPP • Docker</p>
+            <p style="font-size: 0.75rem;">Apache • MySQL • Node.js • Tomcat • phpMyAdmin</p>
         </footer>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+```
+
+## Design System
+
+| Elemento | Valor |
+|----------|-------|
+| Fundo | #f8fafc (muito claro) |
+| Cards | Branco com borda sutil |
+| Texto | #1e293b (escuro) |
+| Primário | #6366f1 (roxo) |
+| Sucesso | #22c55e (verde) |
+
+## Verificação
+
+```bash
+curl http://localhost/super-xampp/
+# Deve retornar HTML com "Super XAMPP"
+```
+
+## Próximo Passo
+
+Ver [PROMPT-11-TESTES.md](PROMPT-11-TESTES.md)
