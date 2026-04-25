@@ -1,0 +1,11 @@
+# Data volumes
+mysql_data/
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+
+# Node modules
+node_modules/
