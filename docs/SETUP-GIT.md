@@ -74,7 +74,30 @@ main    ──── Versão estável (produção)
 develop ──── Trabalho em andamento (desenvolvimento)
 ```
 
-## 7. Fluxo de Trabalho
+## 7. Regra de Desenvolvimento
+
+**TODO desenvolvimento deve ser feito na branch `develop`!**
+
+```bash
+# Sempre trabalhar na develop
+git checkout develop
+
+# Após modificações
+git add .
+git commit -m "tipo: descrição"
+git push origin develop
+```
+
+### Merge para produção
+
+```bash
+# Quando pronto para produzir
+git checkout main
+git merge develop
+git push origin main
+```
+
+## 9. Fluxo de Trabalho
 
 ```
 develop ◄────────────────────────┐
@@ -86,7 +109,7 @@ develop ◄───────────────────────
     └── Push ────────────────────┘
 ```
 
-## 8. Regras de Commits
+## 10. Regras de Commits
 
 ### Quando Commitar
 
@@ -120,13 +143,13 @@ git commit -m "fix: MySQL TCP connection"
 git commit -m "docs: Add troubleshooting guide"
 ```
 
-## 9. Checklist de Setup
+## 11. Checklist de Setup
 
-- [ ] git init feito
-- [ ] .gitignore configurado
-- [ ] Pasta `config/` criada
-- [ ] Pasta `htdocs/super-xampp/` criada
-- [ ] Branch develop criada
+- [x] git init feito
+- [x] .gitignore configurado
+- [x] Pasta `config/` criada
+- [x] Pasta `htdocs/super-xampp/` criada
+- [x] Branch develop criada
 
 ## Próximo Passo
 
