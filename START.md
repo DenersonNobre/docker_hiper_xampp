@@ -17,9 +17,13 @@ PASSO 4: Siga cada prompt em ordem:
 - PROMPT-10-LANDING-PAGE.md
 - PROMPT-11-TESTES.md
 
+PASSO 5: Configure CI/CD (opcional):
+- Leia docs/CI-CD.md
+
 Cada prompt tem: contexto, tarefa, verificação e próximo passo.
 Copie o código de cada prompt para os arquivos correspondentes.
 Teste após cada etapa.
-Regra: Crie PROGRESS.md para monitoramento. Atualize a todo momento!
+Regra 1: Crie PROGRESS.md para monitoramento. Atualize a todo momento!
+Regra 2: Todo desenvolvimento na branch develop!
 
 Objetivo: Ter o Super XAMPP rodando com Docker Compose.

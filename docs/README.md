@@ -9,6 +9,7 @@ Esta documentação contém **prompts sequenciais** que guiam a criação do Sup
 ```
 docs/
 ├── README.md               ← (este) Visão geral
+├── CI-CD.md               ← CI/CD com GitHub Actions
 ├── PROMPTS-README.md       ← Como usar os prompts
 ├── SETUP-GIT.md            ← Setup Git (importante!)
 ├── PROMPT-01-FUNDACAO.md   ← 1. Criar estrutura

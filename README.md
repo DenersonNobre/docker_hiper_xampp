@@ -126,3 +126,21 @@ docker-compose down -v
 - PHP 8.x
 - OpenJDK 21
 - Bootstrap 5
+
+## Regras
+
+1. **Todo desenvolvimento na branch `develop`**
+2. Merge para `main` apenas em produção
+
+```bash
+git checkout develop
+# fazer alterações
+git add .; git commit -m "tipo: descrição"
+git push origin develop
+```
+
+## CI/CD
+
+GitHub Actions configurado em `.github/workflows/docker.yml`.
+
+Ver [docs/CI-CD.md](docs/CI-CD.md) para configurar.

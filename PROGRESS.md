@@ -13,7 +13,9 @@
 - [x] PROMPT-09-TOMCAT.md - Tomcat
 - [x] PROMPT-10-LANDING-PAGE.md - Landing page
 - [x] PROMPT-11-TESTES.md - Testes
-- [x] README.md - Documentação
+- [x] README.md - Documentação completa
+- [x] CI-CD.md - GitHub Actions
+- [x] SETUP-GIT.md - Branch develop
 
 ## Volumes
 
@@ -28,6 +30,11 @@
 - MySQL: ✅ Connection OK
 - Tomcat: ✅ 200
 
+## Regras
+
+1. Todo desenvolvimento na branch `develop`
+2. CI/CD com GitHub Actions
+
 ## Última Atualização
 
-25/04/2026 02:05 - Super XAMPP funcionando com volumes!
+25/04/2026 - Projeto completo!
